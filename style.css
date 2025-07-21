@@ -56,19 +56,19 @@ Default CSS
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-  --fontFamily: 'DM Sans', sans-serif;
-  --headingFont: 'Plus Jakarta Sans', sans-serif;
-  --mainColor: #6600FF;
-  --mainColor2: #43A5FE;
-  --mainColor3: #ff4800;
-  --secounderyColor: #F2EDEB;
-  --paragraphColor: #7A7A7A;
-  --paragraphColorSecond: #B9B9BA;
-  --gridColor: linear-gradient(94deg, var(--mainColor2) 21.18%, #0064C1 104.4%);
+  --fontFamily: 'Inter', sans-serif;
+  --headingFont: 'Montserrat', sans-serif;
+  --mainColor: #1a365d;
+  --mainColor2: #2d5a87;
+  --mainColor3: #e53e3e;
+  --secounderyColor: #f7fafc;
+  --paragraphColor: #4a5568;
+  --paragraphColorSecond: #718096;
+  --gridColor: linear-gradient(94deg, var(--mainColor2) 21.18%, var(--mainColor) 104.4%);
   --whiteColor: #ffffff;
-  --blackColor: #16171A;
-  --LightBg: #fcfaf8;
-  --DarkBg: #05051E;
+  --blackColor: #1a202c;
+  --LightBg: #f7fafc;
+  --DarkBg: #1a202c;
   --fontSize: 17px;
   --transition: .5s;
 }
@@ -148,6 +148,273 @@ p {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+/* BeUnBound Custom Styles */
+.hero-area-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-background,
+.hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.hero-video,
+.hero-background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 54, 93, 0.7);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: var(--whiteColor);
+  padding: 100px 0;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--mainColor2), var(--mainColor3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.manifesto-area {
+  background: var(--LightBg);
+}
+
+.manifesto-content {
+  padding: 2rem 0;
+}
+
+.manifesto-text .lead {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--mainColor);
+  margin-bottom: 2rem;
+}
+
+.pillar-card {
+  background: var(--whiteColor);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(45, 90, 135, 0.1);
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pillar-card .icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gridColor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: var(--whiteColor);
+}
+
+.coaching-category-card {
+  background: var(--whiteColor);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.coaching-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gridColor);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--whiteColor);
+  flex-shrink: 0;
+}
+
+.category-content h4 {
+  color: var(--mainColor);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.work-process-box {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.process-number {
+  width: 60px;
+  height: 60px;
+  background: var(--gridColor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--whiteColor);
+}
+
+.process-icon {
+  font-size: 2.5rem;
+  color: var(--mainColor);
+  margin-bottom: 1rem;
+}
+
+.beunbound-animation .heading-move,
+.beunbound-animation .second-move-heading {
+  background: var(--gridColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-title .sub-title {
+  color: var(--mainColor);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title .title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--blackColor);
+}
+
+.section-title .description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--paragraphColor);
+}
+
+.btn-primary {
+  background: var(--gridColor);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(45, 90, 135, 0.3);
+}
+
+.btn-outline-light {
+  border: 2px solid var(--whiteColor);
+  color: var(--whiteColor);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: var(--whiteColor);
+  color: var(--mainColor);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-title .title {
+    font-size: 2rem;
+  }
+  
+  .pillar-card,
+  .coaching-category-card {
+    margin-bottom: 2rem;
+  }
 }
 
 .ptb-100 {
