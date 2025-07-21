@@ -38,8 +38,8 @@ const BeUnboundContact = () => {
                         </div>
                     </div>
                     
-                    <div className="row">
-                        <div className="col-lg-8">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8 col-md-10">
                             <div className="contact-form">
                                 <form>
                                     <div className="row">

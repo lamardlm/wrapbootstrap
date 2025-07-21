@@ -5635,8 +5635,39 @@ Contact Area CSS
 
 .contact-info-box span {
   color: var(--mainColor2);
-  font-size: 16px;
+}
+
+/* Footer Navigation Link Fixes */
+.footer-widget ul li a {
+  color: #ffffff !important;
+  transition: var(--transition);
+}
+
+.footer-widget ul li a:hover {
+  color: var(--mainColor2) !important;
+}
+
+.cpr-right ul li a {
+  color: #ffffff !important;
+  transition: var(--transition);
+}
+
+.cpr-right ul li a:hover {
+  color: var(--mainColor2) !important;
+}
+
+/* Additional footer link styling for better visibility */
+.footer-area .footer-widget ul li a,
+.footer-area .cpr-right ul li a {
+  color: #ffffff !important;
+  text-decoration: none;
   font-weight: 500;
+}
+
+.footer-area .footer-widget ul li a:hover,
+.footer-area .cpr-right ul li a:hover {
+  color: var(--mainColor2) !important;
+  text-decoration: underline;
 }
 
 .contact-form form .form-group textarea.form-control {

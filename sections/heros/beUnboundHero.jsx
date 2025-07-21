@@ -6,7 +6,7 @@ const BeUnboundHero = () => {
             <div className="hero-area">
                 <div className="video-background">
                     <div className="hero-background-image">
-                        <img src="/all-img/video-bg-1.png" alt="BeUnBound Hero Background" />
+                        <img src="/all-img/moon-bg.png" alt="BeUnBound Hero Background" />
                     </div>
                     <div className="video-overlay"></div>
                 </div>
