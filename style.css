@@ -657,6 +657,24 @@ p:last-child {
   font-size: 18px;
 }
 
+.contact-form .form-control {
+  color: var(--whiteColor) !important;
+  background-color: #151526 !important;
+  border-bottom: 1px solid #1a243d !important;
+}
+
+.contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact-form .form-control:focus {
+  color: var(--whiteColor) !important;
+}
+
+.contact-form textarea.form-control {
+  color: var(--whiteColor) !important;
+}
+
 .form-control::-webkit-input-placeholder {
   color: var(--paragraphColor);
   -webkit-transition: var(--transition);
@@ -5529,13 +5547,86 @@ Contact Area CSS
   border-radius: 0;
   padding-left: 15px;
   border-radius: 5px;
-  color: var(--whiteColor);
+  color: var(--whiteColor) !important;
   font-size: var(--fontSize);
   -webkit-box-shadow: unset !important;
+.contact-form .form-group label {
+  color: var(--whiteColor) !important;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact-form .contact-info h3 {
+  color: var(--whiteColor) !important;
+}
+
+.contact-form .contact-info p {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.contact-form .contact-info .contact-item {
+  color: var(--whiteColor) !important;
+}
+
+.contact-form .contact-item i {
+  color: var(--mainColor) !important;
+}
+
+.contact-form .contact-item span {
+  color: var(--whiteColor) !important;
+}
+
   box-shadow: unset !important;
   background-color: #151526 !important;
   margin-bottom: 30px;
   border-bottom: 1px solid #1a243d !important;
+}
+
+.contact-form .form-group .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact-form .form-group .form-control:focus {
+  color: var(--whiteColor) !important;
+}
+
+.contact-form form .form-group textarea.form-control {
+  height: auto;
+  color: var(--whiteColor) !important;
+}
+
+.contact-form .form-group label {
+  color: var(--whiteColor) !important;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact-info h3,
+.contact-info h4,
+.contact-info p,
+.contact-info .contact-item {
+  color: var(--whiteColor) !important;
+}
+
+.form-control {
+  color: var(--whiteColor) !important;
+}
+
+.form-control:focus {
+  color: var(--whiteColor) !important;
+  background-color: #151526 !important;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact-form .form-group .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact-form .form-group .form-control:focus {
+  color: var(--whiteColor) !important;
 }
 
 .contact-form .form-control:focus {
@@ -5550,6 +5641,7 @@ Contact Area CSS
 
 .contact-form form .form-group textarea.form-control {
   height: auto;
+  color: var(--whiteColor) !important;
 }
 
 .contact-form form .help-block ul {

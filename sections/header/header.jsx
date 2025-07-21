@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Navbar from './navbar'
 import { Link, useLocation } from 'react-router-dom'
-import ResponsiveNavbar from './offcanvasNavbar'
+import ResponsiveNavbar from './offcanvasNavbar-new'
 import SearchBox from './searchBox'
 import Cart from './cart'
 
@@ -49,7 +49,7 @@ const Header = () => {
                 <div className="container">
                     <nav className="navbar navbar-expand-lg">
                         <Link className="navbar-brand" to="/">
-                            Aithm
+                            BeUnBound
                         </Link>
                         <div className="other-all-option">
                             <div className="other-option m-0 d-lg-none">
