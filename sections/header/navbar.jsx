@@ -1,29 +1,24 @@
-import { navigationData } from '@/db/navigationData';
+import { navigationData } from '../../db/navigationData-new.js';
 import React, { useMemo } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = () => {
+export default function Navbar() {
     const pathname = useLocation().pathname;
-
 
     const checkIsActive = (item, currentPathname) => {
         if (item.href === currentPathname) return true;
 
-        // Check dropdownItems
         if (item.dropdownItems) {
             return item.dropdownItems.some(subItem => checkIsActive(subItem, currentPathname));
         }
 
-        // Check nestedDropdown
         if (item.nestedDropdown) {
             return item.nestedDropdown.some(nestedItem => checkIsActive(nestedItem, currentPathname));
         }
 
         return false;
     };
-
-
 
     return (
         <ul className="navbar-nav">
@@ -82,8 +77,5 @@ const Navbar = () => {
                 );
             })}
         </ul>
-
     );
-};
-
-export default Navbar;
+}
