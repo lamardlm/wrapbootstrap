@@ -86,7 +86,7 @@ const Header = () => {
                                 {
                                     pathName !== '/home-three' &&
                                     <div className="option-item">
-                                        <Link to="/contact" className="default-btn"><span>Get Started</span> <i className="bx bx-chevron-right" /></Link>
+                                        <Link to="/login" className="default-btn"><span>Get Started</span> <i className="bx bx-chevron-right" /></Link>
                                     </div>
                                 }
                             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const BeUnboundContact = () => {
     return (
@@ -129,9 +130,9 @@ const BeUnboundContact = () => {
                                     <div className="content">
                                         <h4>Application Process</h4>
                                         <p>Ready to apply? Start your journey with our comprehensive application process.</p>
-                                        <a href="#application" className="btn btn-outline-primary btn-sm">
+                                        <Link to="/application" className="btn btn-outline-primary btn-sm">
                                             Begin Application
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

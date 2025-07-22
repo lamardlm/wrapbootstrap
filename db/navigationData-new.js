@@ -12,7 +12,7 @@ export const navigationData = [
     },
     {
         label: "Services",
-        href: "#",
+        href: "/services",
         hasDropdown: true,
         dropdownItems: [
             {
@@ -49,7 +49,7 @@ export const navigationData = [
     },
     {
         label: "Member Portal",
-        href: "#",
+        href: "/login",
         hasDropdown: true,
         dropdownItems: [
             {
