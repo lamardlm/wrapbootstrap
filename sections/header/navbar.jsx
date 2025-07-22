@@ -1,29 +1,24 @@
-import { navigationData } from '@/db/navigationData';
+import { navigationData } from '../../db/navigationData-new.js';
 import React, { useMemo } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = () => {
+export default function Navbar() {
     const pathname = useLocation().pathname;
-
 
     const checkIsActive = (item, currentPathname) => {
         if (item.href === currentPathname) return true;
 
-        // Check dropdownItems
         if (item.dropdownItems) {
             return item.dropdownItems.some(subItem => checkIsActive(subItem, currentPathname));
         }
 
-        // Check nestedDropdown
         if (item.nestedDropdown) {
             return item.nestedDropdown.some(nestedItem => checkIsActive(nestedItem, currentPathname));
         }
 
         return false;
     };
-
-
 
     return (
         <ul className="navbar-nav">
@@ -32,13 +27,24 @@ const Navbar = () => {
 
                 return (
                     <li key={item.label} className={`nav-item ${item.hasDropdown ? 'dropdown' : ''}`}>
-                        <Link
-                            to={item.href}
-                            className={`nav-link ${item.hasDropdown ? 'dropdown-toggle' : ''} ${isActive ? 'active' : ''}`}
-                        >
-                            {item.label}
-                            {item.hasDropdown && <i className="bx bx-down-arrow-alt" />}
-                        </Link>
+                        {item.hasDropdown ? (
+                            <a
+                                href="#"
+                                className={`nav-link dropdown-toggle ${isActive ? 'active' : ''}`}
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                {item.label}
+                                <i className="bx bx-down-arrow-alt" />
+                            </a>
+                        ) : (
+                            <Link
+                                to={item.href}
+                                className={`nav-link ${isActive ? 'active' : ''}`}
+                            >
+                                {item.label}
+                            </Link>
+                        )}
 
                         {item.hasDropdown && (
                             <ul className="dropdown-menu">
@@ -82,8 +88,5 @@ const Navbar = () => {
                 );
             })}
         </ul>
-
     );
-};
-
-export default Navbar;
+}
