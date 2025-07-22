@@ -27,13 +27,24 @@ export default function Navbar() {
 
                 return (
                     <li key={item.label} className={`nav-item ${item.hasDropdown ? 'dropdown' : ''}`}>
-                        <Link
-                            to={item.href}
-                            className={`nav-link ${item.hasDropdown ? 'dropdown-toggle' : ''} ${isActive ? 'active' : ''}`}
-                        >
-                            {item.label}
-                            {item.hasDropdown && <i className="bx bx-down-arrow-alt" />}
-                        </Link>
+                        {item.hasDropdown ? (
+                            <a
+                                href="#"
+                                className={`nav-link dropdown-toggle ${isActive ? 'active' : ''}`}
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                {item.label}
+                                <i className="bx bx-down-arrow-alt" />
+                            </a>
+                        ) : (
+                            <Link
+                                to={item.href}
+                                className={`nav-link ${isActive ? 'active' : ''}`}
+                            >
+                                {item.label}
+                            </Link>
+                        )}
 
                         {item.hasDropdown && (
                             <ul className="dropdown-menu">

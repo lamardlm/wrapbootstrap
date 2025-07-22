@@ -130,7 +130,7 @@ const BeUnboundContact = () => {
                                     <div className="content">
                                         <h4>Application Process</h4>
                                         <p>Ready to apply? Start your journey with our comprehensive application process.</p>
-                                        <Link to="/application" className="btn btn-outline-primary btn-sm">
+                                        <Link to="/login" className="btn btn-outline-primary btn-sm">
                                             Begin Application
                                         </Link>
                                     </div>

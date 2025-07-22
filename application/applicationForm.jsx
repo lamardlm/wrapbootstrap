@@ -116,7 +116,7 @@ const ApplicationForm = () => {
                 },
                 body: JSON.stringify(applicationData)
             });
-
+            
             if (response.ok) {
                 setSuccess(true);
             } else {
@@ -447,7 +447,7 @@ I have read this agreement, understand its terms, and sign it voluntarily.
                 </div>
             </div>
         </section>
-        );
+    );
 };
 
 export default ApplicationForm;
