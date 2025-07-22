@@ -17,7 +17,14 @@ const BeUnboundHero = () => {
                     height: '100%',
                     zIndex: -1
                 }}>
-                    <div className="video-overlay"></div>
+                    <div className="video-overlay" style={{
+                        background: 'rgba(5, 5, 30, 0.3)',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%'
+                    }}></div>
                 </div>
                 <div className="container-fluid">
                     <div className="row align-items-center">
