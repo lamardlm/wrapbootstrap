@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const BeUnboundProcess = () => {
     const processSteps = [
@@ -92,9 +93,9 @@ const BeUnboundProcess = () => {
                             data-animation="fade-up"
                             data-delay="0.7"
                         >
-                            <a href="#application" className="btn btn-primary btn-lg">
+                            <Link to="/application" className="btn btn-primary btn-lg">
                                 Start Your Application
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
